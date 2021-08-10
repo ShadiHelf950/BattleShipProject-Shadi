@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MultiPlayer</title>
+    <link rel="stylesheet" href="style.css?version5=1">
+
+    <style>
+        input[type=submit] {
+            font-size: inherit;
+            background-color: brown;
+            padding: .5em 1em;
+            outline: none;
+            border: double;
+            text-decoration: solid;
+            cursor: pointer;
+            border-radius: .8em;
+            color: aqua;
+            margin: 5px;
+        }
+
+    </style>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js?v=1" charset="utf-8"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div id="username1"></div>
+
+        <div class="player p1">
+            Player 1
+            <div class="connected">Connected</div>
+            <div class="ready">Ready</div>
+        </div>
+
+        <div class="player p2">
+            Player 2
+            <div class="connected">Connected</div>
+            <div class="ready">Ready</div>
+        </div>
+
+        <div id="username2"></div>
+
+        <script>
+
+            let gameMode = 'multiPlayer'
+
+            var username;
+            var playerIndex;
+
+            var sPageURL = window.location.search.substring(1);
+
+            var sURLVariables = sPageURL.split('&');
+
+            for (var i = 0; i < sURLVariables.length; i++) {
+
+                var sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] == "Username") {
+
+                    username = sParameterName[1];
+                }
+
+                if (sParameterName[0] == "PlayerIndex") {
+
+                    playerIndex = sParameterName[1];
+                }
+            }
+
+            if (playerIndex == -1 || playerIndex == 1) {
+                document.getElementById("username1").innerHTML = username
+                document.getElementById("username1").classList.add("username1")
+            }
+
+            else {
+                document.getElementById("username2").innerHTML = username
+                document.getElementById("username2").classList.add("username2")
+            }
+
+        </script>
+
+    </div>
+
+        <div class="container">
+            <div class="battleship-grid grid-user"></div>
+            <div class="battleship-grid grid-computer"></div>
+        </div>
+
+        <div class="container hidden_info">
+            <button id="start" class="btn">Start Game</button>
+            <button id="rotate" class="btn">Rotate Your Ships</button>
+
+        </div>
+        <h3 id="whose-go" class="background_info info-text">No Current Active Game</h3>
+        <h3 id="info" class="game_text info-text">Please place all ships below</h3>
+
+        <div class="container">
+            <div class="grid-display">
+                <div class="ship destroyer-container" draggable="true"><div id="destroyer-0"></div><div id="destroyer-1"></div></div>
+                <div class="ship submarine-container" draggable="true"><div id="submarine-0"></div><div id="submarine-1"></div><div id="submarine-2"></div></div>
+                <div class="ship cruiser-container" draggable="true"><div id="cruiser-0"></div><div id="cruiser-1"></div><div id="cruiser-2"></div></div>
+                <div class="ship battleship-container" draggable="true"><div id="battleship-0"></div><div id="battleship-1"></div><div id="battleship-2"></div><div id="battleship-3"></div></div>
+                <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
+            </div>
+        </div>
+</body>
+</html>

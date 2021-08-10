@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MultiPlayer</title>
+    <link rel="stylesheet" href="MultiPlayerLoginStyle.css">
+
+    <style>
+        input[type=button], input[type=submit], input[type=reset] {
+            font-size: inherit;
+            background-color: brown;
+            padding: .5em 1em;
+            outline: none;
+            border: double;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: .2em;
+            color: aqua;
+            margin-top: 20px;
+        }
+
+        input[type=text], input[type=password], input[type=email], input[type=date], select {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 17px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main_title">
+        MultiPlayer
+    </div>
+
+    <div class="note">
+        NOTE : Enter your username and password in order enter an online match
+    </div>
+
+    <div class="my_form">
+
+        <form action="http://localhost:3000/MultiPlayerLogin.html" method="post">
+
+            <div class="my_form_name">
+                <label for="name">Username</label>
+                <input type="text" name="name" placeholder="Enter Here..." required>
+            </div>
+
+            <div class="my_form_password">
+                <label>
+                    Password
+                    <input type="password" name="password" placeholder="Enter Here..." required>
+                </label>
+            </div>
+
+            <input type="hidden" name="id" value="3487">
+
+            <input type="reset" value="Reset All Fields">
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    <div class="core">
+        <button class="button" id="back" onclick="location.href ='Index.html';"> Back To Main Page </button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>LeaderBoards</title>
+    <link rel="stylesheet" href="LeaderBoardsPageStyle.css">
+
+    <style>
+
+        input[type=button], input[type=submit]{
+            font-size: inherit;
+            background-color: brown;
+            padding: .5em 1em;
+            outline: none;
+            border: double;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: .2em;
+            color: aqua;
+            margin-top: 20px;
+        }
+
+        select {
+            width: 30%;
+            padding: 12px 20px;
+            background-color: brown;
+            color: aqua;
+            margin: 8px 0;
+            margin-top: -10px;
+            font-size: 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="main_title">
+        LeaderBoards
+    </div>
+
+    <div class="note">
+        Choose an order to display the results
+    </div>
+
+    <div class="my_form">
+
+        <form action="http://localhost:3000/LeaderBoardsPage.html" method="post">
+
+            <div class="my_form_order">
+                <select name="order">
+                    <option value="Descending By Points">Descending By Points</option>
+                    <option value="Ascending By Points">Ascending By Points</option>
+                    <option value="Alphabetically Descending">Alphabetically Descending</option>
+                    <option value="Alphabetically Ascending">Alphabetically Ascending</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+    <div class="core">
+         <button class="button" id="back" onclick="location.href ='Index.html';"> Back To Main Page </button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MultiPlayer</title>
+    <link rel="stylesheet" href="style.css?version5=1">
+
+    <style>
+
+        select {
+            width: 9.5%;
+            padding: 5px 10px;
+            background-color: brown;
+            color: aqua;
+            margin: 8px 0;
+            margin-top: 5px;
+            margin-right: 5px;
+            font-size: 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script>
+        let gameMode = 'singlePlayer'
+    </script>
+    <script src="app.js?v=1" charset="utf-8"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="battleship-grid grid-user"></div>
+        <div class="battleship-grid grid-computer"></div>
+    </div>
+
+    <div class="container hidden_info">
+        <h3 class="diff">Difficulty</h3>
+        <select id="difficulty">
+            <option value="Normal">Normal</option>
+            <option value="Hard">Hard</option>
+        </select>
+        <button id="start" class="btn">Start Game</button>
+        <button id="rotate" class="btn">Rotate Your Ships</button>
+        <button class="btn" onclick="location.href ='Index.html';"> Back To Main Page </button>
+    </div>
+    <h3 id="whose-go" class="background_info info-text">No Current Active Game</h3>
+    <h3 id="info" class="game_text info-text">Please place all ships below</h3>
+
+
+    <div class="container">
+        <div class="grid-display">
+            <div class="ship destroyer-container" draggable="true"><div id="destroyer-0"></div><div id="destroyer-1"></div></div>
+            <div class="ship submarine-container" draggable="true"><div id="submarine-0"></div><div id="submarine-1"></div><div id="submarine-2"></div></div>
+            <div class="ship cruiser-container" draggable="true"><div id="cruiser-0"></div><div id="cruiser-1"></div><div id="cruiser-2"></div></div>
+            <div class="ship battleship-container" draggable="true"><div id="battleship-0"></div><div id="battleship-1"></div><div id="battleship-2"></div><div id="battleship-3"></div></div>
+            <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
+        </div>
+    </div>
+</body>
+</html>

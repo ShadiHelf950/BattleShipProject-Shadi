@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Account Edit</title>
+    <link rel="stylesheet" href="AccountEditPageStyle.css">
+
+    <style>
+        input[type=button], input[type=submit], input[type=reset] {
+            font-size: inherit;
+            background-color: brown;
+            padding: .5em 1em;
+            outline: none;
+            border: double;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: .2em;
+            color: aqua;
+            margin-top: 20px;
+        }
+
+        input[type=text], input[type=password], input[type=email], input[type=date], select {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 17px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main_title">
+        Account Edit
+    </div>
+
+    <div class="note">
+        NOTE : In order to update your username, password or email you have to enter your current username, password and email.
+        Upon successful update, a confirmation message will be sent to your updated email address.
+    </div>
+
+    <div class="my_form">
+
+        <form action="http://localhost:3000/AccountEditPage.html" method="post">
+
+            <div class="my_form_name">
+                <label for="name">Enter current username</label>
+                <input type="text" name="name" placeholder="Enter Here..." required>
+            </div>
+
+            <div class="my_form_password">
+                <label>Enter current password</label>
+                <input type="password" name="password" placeholder="Enter Here..." required>
+            </div>
+
+            <div class="my_form_email">
+                <label>Enter current email</label>
+                <input type="email" name="email" placeholder="Enter Here...">
+            </div>
+
+            <div class="new_note">New Information</div>
+
+            <div class="my_form_name">
+                <label for="name">Enter a new username</label>
+                <input type="text" name="new_name" placeholder="Enter Here...">
+            </div>
+
+            <div class="my_form_password">
+                <label>Enter a new password</label>
+                <input type="password" name="new_password" placeholder="Enter Here...">
+            </div>
+
+            <div class="my_form_email">
+                <label>Enter a new email</label>
+                <input type="email" name="new_email" placeholder="Enter Here...">
+            </div>
+
+            <input type="reset" value="Reset All Fields">
+
+            <input type="button" value="Delete Account" onclick="location.href ='DeleteAccountPage.html';">
+
+            <input type="reset" value="Forgot Username or Password ?" onclick="location.href ='InfoRestorationPage.html';">
+
+            <input type="submit" value="Submit">
+
+            <input type="button" value="Don't Have an Account? Click Here to Register" onclick="location.href ='RegisterPage.html';">
+
+        </form>
+    </div>
+
+    <div class="core">
+        <button class="button" id="back" onclick="location.href ='Index.html';"> Back To Main Page </button>
+    </div>
+
+</body>
+</html>

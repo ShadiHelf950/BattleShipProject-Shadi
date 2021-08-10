@@ -1,0 +1,82 @@
+﻿body {
+    font-family: Garamond;
+    height: 100%;
+    overflow: auto;
+    background-color: darkblue;
+}
+
+.main_title {
+    font-family: 'Trebuchet MS';
+    font-size: 70px;
+    height: 100px;
+    width: 500px;
+    text-decoration: double;
+    text-align: center;
+    margin-left: 420px;
+    color: aqua;
+}
+
+.note {
+    font-family: 'Trebuchet MS';
+    font-size: 23px;
+    height: 100px;
+    width: 500px;
+    text-decoration: double;
+    text-align: center;
+    margin-left: 420px;
+    margin-top: -13px;
+    color: yellow;
+}
+
+.my_form {
+    text-align: center;
+}
+
+.my_form_name {
+    margin-top: 12px;
+    font-size: 23px;
+    font-family: 'Trebuchet MS';
+    color: yellow;
+}
+
+.my_form_email {
+    margin-top: 30px;
+    font-size: 23px;
+    font-family: 'Trebuchet MS';
+    color: yellow;
+}
+
+.my_form_birthdate {
+    margin-top: 30px;
+    font-size: 23px;
+    font-family: 'Trebuchet MS';
+    color: yellow;
+}
+
+.my_form_password {
+    margin-top: 30px;
+    font-size: 23px;
+    font-family: 'Trebuchet MS';
+    color: yellow;
+}
+
+
+.core {
+    text-align: center;
+}
+
+.button {
+    background-color: brown;
+    border: groove;
+    color: aqua;
+    padding: 16px 33px;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    text-decoration: double;
+    font-size: 30px;
+    margin-left: 520px;
+    margin-top: 20px;
+    display: block;
+    cursor: pointer;
+    border-radius: .5em;
+}
